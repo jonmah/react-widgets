@@ -8,6 +8,7 @@ import Dropdown from './components/Dropdown'
 import Translate from './components/Translate'
 import YouTube from './components/YouTube'
 import LanguageSelector from './components/LanguageSelector'
+import Songs from './components/Songs'
 
 const items = [
   {
@@ -47,17 +48,20 @@ const App = () => {
           selected={selected}
         />
       </Route>
+      <Route path="/languageSelector">
+        <LanguageSelector />
+      </Route>
       <Route path="/search">
         <Search />
+      </Route>
+      <Route path="/songs">
+        <Songs />
       </Route>
       <Route path="/translate">
         <Translate />
       </Route>
       <Route path="/youtube">
         <YouTube />
-      </Route>
-      <Route path="/languageSelector">
-        <LanguageSelector />
       </Route>
     </>
   )
